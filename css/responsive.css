@@ -1,0 +1,54 @@
+@media (min-width: 320px) and (max-width: 480px)  {
+
+	.burgerbar {
+    margin-left: 0px;
+		transform:none!important;
+		
+}
+	#feature h4 {
+;
+    font-size: 23px;
+}
+	.overlays {
+  
+    width: 175px;
+    height: 175px;
+	}
+	.overlays h4 {
+ 
+		font-size: 23px;}
+	
+	.footer-content {
+   text-align: center;
+}
+	.logo img {
+   
+    height: 35px;
+    left: 50px;
+}
+	.footer-copyright{
+		clip-path:none;
+		padding-top: 10px!important;
+	}
+}
+	
+	@media (min-width: 481px) and (max-width: 767px) {
+ 
+	
+}
+
+
+
+	@media (min-width: 1200px) {
+
+
+		.side-nav {
+
+			width: 65px;
+			height: 215px;
+			transform: translateY(-50%);
+			top: 50%;
+
+		}
+
+	}
