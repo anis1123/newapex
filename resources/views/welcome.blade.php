@@ -170,7 +170,7 @@
 
 
 				<li class="nav-item">
-					<a class="nav-link" href="faculty">FACULTY</a>
+					<a class="nav-link" href="inside">FACULTY</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="news">NEWS AND EVENTS</a>
