@@ -13,6 +13,37 @@
 
 Route::get('/','WelcomeController@index');
 
+Route::get('/vacancy_index', 'vacancyController@index')
+->name('vacancy_index');
+Route::get('/createvacancy', 'vacancyController@create')
+->name('createvacancy');
+Route::post('/add_vacancy/index', 'vacancyController@store')->name('vacancy');
+Route::get('/vacancydelete/{faculty}','vacancyController@delete')
+->name('delete_vacancy');
+
+Route::get('/chairman_index', 'chairmanmsgController@index')
+->name('chairman_index');
+Route::get('/createmsg', 'chairmanmsgController@create')
+->name('createmsg');
+Route::get('/editmsg/{chairmanmsg}', 'chairmanmsgController@edit')
+->name('editmsg');
+Route::get('/updatemsg/{chairmanmsg}', 'chairmanmsgController@update')
+->name('updatemsg');
+
+ 
+Route::get('/inside','FacultyController@faculty');
+Route::get('/facultybackend', 'FacultyController@facultyback')
+->name('facultybackend');
+Route::get('/facultyadd', 'FacultyController@create');
+Route::get('/facultyedit/{faculty}', 'FacultyController@edit')
+->name('faculty_edit');
+Route::get('/facultydelete/{faculty}', 'FacultyController@delete')
+->name('faculty_delete');
+Route::post('/create', 'FacultyController@add')
+->name('add_faculty');
+Route::post('/update/{faculty}', 'FacultyController@update')
+->name('update_faculty');
+
 
 Route::get('/news', [
     'uses' => 'Backend\BlogController1@post1',

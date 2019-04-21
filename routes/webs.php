@@ -8,7 +8,8 @@ Route::get('/drafts', 'PostController@drafts')
 
 Route::get('all','PostController@all');
 
-
+Route::post('/chairmanmsg','chairmanmsgController@store')
+->name('chairmanmsg');
 
 Route::get('post','PostController@index');
 Route::get('posts', 'PostController@index')->name('list_posts');
@@ -61,6 +62,19 @@ Route::post('/general', 'GeneralController@store')
 Route::get('user','PostController@list');
 
 Route::get('Register',[
-    'middleware'=>'admin',
+    'middleware'=>'admin']);
 
-]);
+Route::get('/acs','vacancyController@vacancyfront');
+Route::get('/createaluminifront', 'aluminiController@frontendalumini');
+Route::get('/createalumini','aluminiController@store');
+Route::get('/addalumini',function(){
+    return view ('alumini.add');
+});
+Route::get('/editalumini/{alumini}','aluminiController@edit')
+->name('editalumini');
+Route::get('/showalumini','aluminiController@index')
+->name('showalumini');
+Route::get('/deletealumini/{alumini}','aluminiController@destroy')
+->name('deletealumini');
+Route::get('/update/{alumini}', 'aluminiController@update')
+->name('updatealumini');
