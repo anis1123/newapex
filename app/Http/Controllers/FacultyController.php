@@ -92,10 +92,10 @@ class FacultyController extends Controller
         $chairmanmsg=chairman_msg::all();
         $facultyprogram=faculty::where('post', ["program head",""])->paginate(5);
 
-        $facultyfulltime=faculty::where('post', ["Full Time Faculty","BBA-TT Program Head","BBA-BI Program Head","BBA Program Head","BCIS Program Head","MBA Evening Program Coordinator","Associate Director Graduate Program","Head-Apex Career Services","Associate Director Undergraduate Program","Head-Communication Department"])->paginate(7);
+        $facultyfulltime=faculty::whereIn('post', ["Full Time Faculty","BBA-TT Program Head","BBA-BI Program Head","BBA Program Head","BCIS Program Head","MBA Evening Program Coordinator","Associate Director Graduate Program","Head-Apex Career Services","Associate Director Undergraduate Program","Head-Communication Department"])->paginate(7);
         $facultyvisiting=faculty::where('post', "Visiting Faculty")->paginate(7);
-        $facultyadmin=faculty::where('post', ["Administration","Examination Department","MIS","Apex Career Service","Lab and Maintenance","Accounts","Finance and Administration","Server","Library"])->paginate(7);
-        $facultymain=faculty::where('post', ["Principal","Vice Principal","Chairperson","Faculty Development Advisor","Director, Student Affairs","Director, Academic Affairs"])->paginate(7);
+        $facultyadmin=faculty::whereIn('post', ["Administration","Examination Department","MIS","Apex Career Service","Lab and Maintenance","Accounts","Finance and Administration","Server","Library"])->paginate(7);
+        $facultymain=faculty::whereIn('post', ["Principal","Vice Principal","Chairperson","Faculty Development Advisor","Director, Student Affairs","Director, Academic Affairs"])->paginate(7);
         return view('faculty', compact('facultymain','facultyfulltime','facultyvisiting','facultyadmin','facultyprogram','upcomingpost','chairmanmsg'));
     }
     public function facultyback(){

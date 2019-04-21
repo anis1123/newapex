@@ -293,6 +293,7 @@ button:focus {
 
 select.form-control {
     color: #71748d;
+    height: auto!important;
     -webkit-appearance: none;
     -moz-appearance: none;
     background-position: 99% 52%;

@@ -1983,8 +1983,8 @@ select.form-control:focus::-ms-value {
   border-radius: 0.3rem;
 }
 
-select.form-control[size], select.form-control[multiple] {
-  height: auto;
+select.form-control:not([size]):not([multiple]) {
+  height: auto!important;
 }
 
 textarea.form-control {
