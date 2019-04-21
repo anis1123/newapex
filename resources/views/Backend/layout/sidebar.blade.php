@@ -79,6 +79,21 @@
                                                     </ul>
                                                 </div>
                                         </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#minisubmenu-3" aria-controls="minisubmenu-3">Faculty <span class="badge badge-success">6</span></a>
+                                                <div id="minisubmenu-3" class="collapse submenu" style="">
+                                                <ul class="nav flex-column">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="{{ route('facultybackend') }}">Faculty</a>
+                                                    </li>
+
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="{{ route('chairman_index') }}" >Chairman's Message</a>
+                                                    </li>                                               
+
+                                                </ul>
+                                            </div>    
+                                        </li>
                                         
 
 
@@ -634,6 +649,9 @@
                                         </li>
                                     </ul>
                                 </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="showalumini" aria-expanded="false" data-target="#submenu-8" aria-controls="submenu-8"><i class="fas fa-fw fa-address-book"></i>Aluminis</a>
                             </li>
                            <!--<li class="nav-divider">
                                 Features
