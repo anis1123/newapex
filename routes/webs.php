@@ -78,3 +78,15 @@ Route::get('/deletealumini/{alumini}','aluminiController@destroy')
 ->name('deletealumini');
 Route::get('/update/{alumini}', 'aluminiController@update')
 ->name('updatealumini');
+
+Route::get('/student',function(){
+
+    return view('studentvoice');
+
+});
+
+Route::get('/globalconnection',function(){
+
+    return view('global');
+
+});
