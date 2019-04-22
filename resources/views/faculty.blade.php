@@ -10,6 +10,8 @@
 
     </section>
 
+
+
     <div class="topic text-center mt-4 ">
         <h5 class="heading">FACULTY & STAFF</h5>
     </div>
@@ -42,7 +44,7 @@
 
 
             </li>
-            
+
             @endforeach
             @else
                 <p>No data found</p>
@@ -54,7 +56,10 @@
 
 
 </section>
-    <div id="responsiveTabsDemo" class="m-5">
+
+<div class="row p-0 m-0 pr-5">
+
+    <div id="responsiveTabsDemo" class="m-5 col-md-8">
             <ul>
             <li><a href="#tab-0">Apex Staffs</a></li>
             <li><a href="#tab-1"> Full Time Faculty </a></li>
@@ -62,8 +67,8 @@
             <li><a href="#tab-3"> Team Apex </a></li>
             </ul>
                 <div id="tab-0" >
-                    <div class="row pb-4 m-0">
-            <div class="article-member col-md-9 px-5 pt-3">
+                    <div class="row m-0">
+            <div class="article-member col-md-12 px-5 pt-3">
                 <p>
                     Apex constitutes a diversified team of experts among private management colleges in the country. Office staffs are always aspiring for new knowledge and development in their careers and academics of students. Their coordinated efforts on latest teaching pedagogy with efficient administrative support create an effective learning environment in classrooms and beyond.
                 </p>
@@ -72,7 +77,7 @@
             <section id="teachers" class="p-5">
 <div class="row  px-5">
 <div class="col-md-9">
-    <div class="image-member row pt-4">
+    <div class="image-member row ">
         @if(count($facultyadmin)>0)
         @foreach($facultyadmin as $posts)
             <div class="members ">
@@ -112,14 +117,14 @@
                     Our faculty members take pride in representing Apex College in national and international seminars and conference. They are always striving for excellence, both in their career and in delivering you knowledge. They make your learning experience challenging, and at the same time rewarding. They are passionate teachers and mentors committed to disseminating knowledge and skills, and shaping your behavior for your success in life.
                 </p>
             </div>
-            
+
             <section id="teachers" class="p-5">
 <div class="row  px-5">
 <div class="col-md-9">
-    <div class="image-member row pt-4">
+    <div class="image-member row">
         @if(count($facultyfulltime)>0)
         @foreach($facultyfulltime as $posts)
-            <div class="members ">
+            <div class="members row">
                 <div class="col m3 p-0 m-1">
                     <img src="{{asset('upload/' . $posts->image)}}" alt="" class="img-fluid">
                     <div class="member-overlay">
@@ -182,7 +187,7 @@
                 </div>
             </div>
         @endforeach
-            
+
 
         @else
             <p>No data found</p>
@@ -245,16 +250,37 @@
 <div> {{ $facultymain->links() }}</div>
 </section>
 <!-- The Modal -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <div class="modal fade" id="myModal">
     <div class="modal-dialog">
       <div class="modal-content">
-      
+
         <!-- Modal Header -->
         <div class="modal-header">
           <h4 class="modal-title center">Chairperson's Message</h4>
           <button type="button" class="close" data-dismiss="modal">X</button>
         </div>
-        
+
         <!-- Modal body -->
         <div class="modal-body">
             @foreach($chairmanmsg as $post)
@@ -266,37 +292,44 @@
             Minendra P. Rijal, Ph D<br>
 Chairperson
         </div>
-        </div>                  
+        </div>
       </div>
     </div>
   </div>
 </div>
 </div>
-<section id="side-nav" class="col-md-3">
-    <div class="row ">
+
+
+
+
+
+<section id="side-nav" class="col-md-3 mt-5 " style="background:#fff">
+    <div class="row pt-3">
 
 
 
                             <div class="clearfix visible-sm visible-xs">
                               &nbsp;
                             </div>
-                            <div class="">
-                              <ul class="nav nav-pills" role="tablist">
-                                <li class="active">
-                                  <a data-toggle="tab" href="#tab1" role="tab">Events</a>
+
+
+                            <div class="pl-3" >
+                              <ul class="nav nav-pills pl-2" role="tablist" >
+                                <li class="active" >
+                                  <a data-toggle="tab" class="btn btn-secondary" href="#tab1" role="tab" style="background:none;color:#000;font-weight:500">Events</a>
                                 </li>
-                                <li class="active">
-                                  <a data-toggle="tab" href="#tab2" role="tab">News</a>
+                                <li class="active" >
+                                  <a data-toggle="tab" class="btn btn-secondary"  href="#tab2" role="tab" style="background:none;color:#000;font-weight:500">News</a>
                                 </li>
                               </ul>
                             </div>
                           </div><!-- / row -->
 
-                          <div class="tab-content">
+                          <div class="tab-content pl-4">
                             <div class="tab-pane active" id="tab1">
                               <div class="row">
                                 <div class="col-md-9">
-                                  
+
                                   @foreach($upcomingpost as $post)
                                     <div class="media">
                                       <a class="pull-left" href="#"><span class="dateEl">{{ $post->created_at }}</span></a>
@@ -319,6 +352,13 @@ Chairperson
 
                             </div>
 </section>
+
+
+
+
+
+</div>
+
 <script>
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
